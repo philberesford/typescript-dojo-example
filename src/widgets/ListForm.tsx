@@ -29,9 +29,7 @@ export default factory(function ListForm({properties, middleware: {icache, store
       icache.delete("txtName");
     
       // Bubble changes up the stack
-      if (onChange) {
-        onChange(names);
-      }
+      onChange?.(names);
     });
     return true;
   }
